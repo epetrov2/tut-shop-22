@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { IProduct } from "src/app/models/product";
 
 
 @Component({
@@ -6,5 +7,5 @@ import { Component } from "@angular/core";
     templateUrl: './product.component.html'
 })
 export class ProductComponent{
-
+    @Input() product?: IProduct;
 }
