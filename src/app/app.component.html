@@ -3,13 +3,10 @@
     {{ title | titlecase }}
   </h1>
 
-  <div *ngIf="products; else loading"></div>
+  <div *ngIf="loading" class="font-bold">Loading...</div>
 
-      <app-product 
-      *ngFor="let product of products"
-      [product]="product"
-      ></app-product>
-
+  <app-product
+    *ngFor="let product of products$ | async"
+    [product]="product"
+  ></app-product>
 </div>
-
-<ng-template #loading>loading...</ng-template>
