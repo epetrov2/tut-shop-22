@@ -7,8 +7,17 @@
 
   <div *ngIf="loading" class="font-bold">Loading...</div>
 
-  <app-product
-    *ngFor="let product of products$ | async"
-    [product]="product"
-  ></app-product>
+  <input
+    type="text"
+    class="mb-2 py-2 px-4 border w-full"
+    placeholder="Filter products"
+    [(ngModel)]="term"
+  />
+
+  <div *ngIf="products$ | async as products">
+    <app-product
+      *ngFor="let product of products | filterProducts: term"
+      [product]="product"
+    ></app-product>
+  </div>
 </div>

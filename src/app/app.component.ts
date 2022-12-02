@@ -12,6 +12,8 @@ import { ProductService } from './services/product.service';
 export class AppComponent implements OnInit{
   title = 'Angular shop app';
 
+  term = '';
+
   constructor(private productService: ProductService) { }
 
   products$?: Observable<IProduct[]>;
