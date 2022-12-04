@@ -7,5 +7,11 @@
     class="border w-full py-2 px-4 mb-2"
   />
 
+  
+    <p
+        *ngIf="title.touched && title.errors?.['minlength']"
+        class="text-red-600 font-medium mb-2"
+    >error</p>
+  
   <button class="py-2 px-4 bg-blue-600 text-white" type="submit">Create</button>
 </form>
