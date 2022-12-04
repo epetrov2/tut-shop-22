@@ -8,6 +8,7 @@ import { ProductComponent } from './components/product/product.component';
 import { GlobalErrorComponent } from './components/global-error/global-error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ModalComponent } from './components/modal/modal.component';
     ProductComponent,
     GlobalErrorComponent,
     FilterProductsPipe,
+    CreateProductComponent,
     ModalComponent
   ],
   imports: [
