@@ -10,25 +10,8 @@ import { ProductService } from './services/product.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'Angular shop app';
 
-  term = '';
-
-  constructor(
-    public productService: ProductService,
-    public modalService: ModalService
-    ) { }
-
   
-
-  loading = false;
-
-  ngOnInit(): void {
-    this.loading = true;
-    this.productService.getAll().subscribe(
-      () => this.loading = false)
-    
-    
-  }
 }
